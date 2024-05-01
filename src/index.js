@@ -85,7 +85,7 @@ async function performTranslate(params, from, to) {
         return response([
             {
                 Title: res.text,
-                Subtitle: `${from} -> ${to} parameters`,
+                Subtitle: `${res.from.language.iso ?? from} -> ${to} parameters`,
                 IcoPath: ICON_PATH,
                 JsonRPCAction: {
                     method: 'copy',
